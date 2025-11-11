@@ -23,7 +23,7 @@ function handleSymbol(symbol) {
       break;
     case '=':
       if (ultimoOperador === null) return;
-      flushOperationAndLog(parseInt(buffer));
+      flushOperationAndLog(Number.parseInt(buffer));
       ultimoOperador = null;
       buffer = '' + memoria;
       memoria = 0;
@@ -183,3 +183,4 @@ function initTodoList() {
 // Inicializar ambos módulos
 initCalculadora();
 initTodoList();
+
